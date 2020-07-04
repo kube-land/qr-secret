@@ -5,7 +5,7 @@ language: go
 go:
 - '1.14'
 before_install:
-  - sudo apt-get -y install libxcursor-dev libx11-dev libxrandr-dev libxinerama-dev libxi-dev
+  - sudo apt-get -y install libxcursor-dev libx11-dev libxrandr-dev libxinerama-dev libxi-dev libmesa-dev
 before_deploy:
 - "./hack/build-mac.sh"
 - ls
