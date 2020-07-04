@@ -1,8 +1,8 @@
 #! /bin/bash
 
-mkdir -p build/QRSecret.app/Contents/{MacOS,Resources}
+mkdir -p build/mac/QRSecret.app/Contents/{MacOS,Resources}
 
-cat <<EOF >> build/QRSecret.app/Contents/Info.plist
+cat <<EOF >> build/mac/QRSecret.app/Contents/Info.plist
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -21,4 +21,5 @@ cat <<EOF >> build/QRSecret.app/Contents/Info.plist
 </plist>
 EOF
 
-cp -rf build/qr-secret build/QRSecret.app/Contents/MacOS
+cp -rf build/qr-secret build/mac/QRSecret.app/Contents/MacOS
+cp -rf logo/icon.icns build/mac/QRSecret.app/Contents/Resources

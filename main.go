@@ -91,7 +91,7 @@ func main() {
 	qrsecret.button.Disable()
 	qrsecret.input.OnChanged = qrsecret.onChangeInput
 	con := widget.NewScrollContainer(qrsecret.input)
-	con.SetMinSize(fyne.NewSize(256, 256))
+	con.SetMinSize(fyne.NewSize(256, 96))
 	qrsecret.content = widget.NewVBox(con, qrsecret.button)
 	qrsecret.button.OnTapped = qrsecret.onTapButton
 
