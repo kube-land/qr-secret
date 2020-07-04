@@ -19,7 +19,7 @@ deploy:
   provider: releases
   skip_cleanup: true
   #api_key:
-    secure: 
+    #secure: 
   file: 
     - "dist/QRSecret.dmg"
   on:
