@@ -4,6 +4,8 @@ os:
 language: go
 go:
 - '1.14'
+before_install:
+  - sudo apt-get -y install libxcursor-dev
 before_deploy:
 - "./hack/build-mac.sh"
 - ls
