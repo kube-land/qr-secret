@@ -21,5 +21,5 @@ cat <<EOF >> build/QRSecret/QRSecret.app/Contents/Info.plist
 </plist>
 EOF
 
-cp -rf build/qr-secret build/QRSecret/QRSecret.app/Contents/MacOS
+cp -rf build/qr-secret-darwin-amd64 build/QRSecret/QRSecret.app/Contents/MacOS/qr-secret
 cp -rf logo/icon.icns build/QRSecret/QRSecret.app/Contents/Resources

@@ -1,5 +1,5 @@
 os: 
-  #- osx
+  - osx
   - linux
 language: go
 go:
@@ -17,7 +17,9 @@ deploy:
   provider: releases
   api_key:
     secure: VMR3EMxcOVGUgKOHEumcqmXDWNMp8+bzCOeIBW1+HJAM1mtuuYRPIVlU6cBlSOjvO+v3dQ/wbooVc5sn5yrUnzhGfwdOFq+EUKFtTjRoSqKD9zFvcWFMlzX7kOtzVSFQLmjyrckYgEGjg5fKpjC5u9nZxoQhdqGEb4DA6Beivpz5WWNwJ9DuAp86jdYMeWD+fp6y9fmGKWLcfWDvlJTE2wSne6Om0RySiZigtP2um3oO/DvEvHYl3mFbqeobCMgtWyKLDz9doXCaatJ2vjNmmfgjr4WNyA9+y48q4wQlOZ7MgLP1OAI7aeD9TY9Wqs83lekEwlsEjDFaCnaUfW9c/hCKaNPZ9UYqi5hnlLvaQVxX7fzLH8OeZwC7Wyz/EiF/wOOfZrM0UiRmKEEY0w6ONJ/N2dDUhHZPQgEQaJUuDCk+Eaw/Q1rrXHkoVTPfR0OPkaiDDuGs4jsClYh65gpHsNniiuPFwry7Jl4rtvWR8F9regK/SDIEKQZGImHHJ2fN+rRDwgdD0cAP1uFEnXuo4U8HVggb/ZzJ1mHG+0PW43RNJ9yAgQiF9iGOtm3k92JqWGutlCzuqvWlAPGZ6zzRvGLxwsh5hcsng1V2ibZ0LimyPN/N2sGyf/ZnPnfj51jB2U1e8iVHmMI+39NBVZ1+PVudg7p2pe3NQ7LQt5LYNKY=
-  file: build/QRSecret.dmg
+  file: 
+    - build/QRSecret.dmg
+    - build/qr-secret-linux-amd64
   on:
     repo: pharmatics/qr-secret
     #tags: true
