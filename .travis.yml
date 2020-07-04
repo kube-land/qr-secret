@@ -1,11 +1,11 @@
 os: 
-  - osx
+  #- osx
   - linux
 language: go
 go:
 - '1.14'
 before_install:
-  - sudo apt-get -y install libxcursor-dev
+  - sudo apt-get -y install libxcursor-dev libx11-dev
 before_deploy:
 - "./hack/build-mac.sh"
 - ls
