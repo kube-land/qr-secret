@@ -7,7 +7,7 @@ GO_PACKAGES = ./...
 
 define binary
 qr-secret-$(1)-$(2):
-	GOOS=$(1) GOARCH=$(2) $(GO) build -o build/$$@ .
+	GOOS=$(1) GOARCH=$(2) $(GO) build -ldflags "-w -s" -o build/$$@ .
 endef
 
 $(eval $(call binary,linux,amd64))

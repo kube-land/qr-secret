@@ -23,3 +23,5 @@ EOF
 
 cp -rf build/qr-secret-darwin-amd64 build/QRSecret/QRSecret.app/Contents/MacOS/qr-secret
 cp -rf logo/icon.icns build/QRSecret/QRSecret.app/Contents/Resources
+
+hdiutil create build/QRSecret.dmg -srcfolder build/QRSecret -ov
