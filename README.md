@@ -21,7 +21,7 @@ To install on linux download either the binary or the binary with desktop launch
 sudo curl -sSL -o /usr/local/bin/qr-secret https://github.com/pharmatics/qr-secret/releases/download/v1.0.1/qr-secret-linux-amd64
 sudo chmod +x /usr/local/bin/qr-secret-linux-amd64
 
-# for full application
+# for binary with launcher
 sudo curl -sSL -o ~/qr-secret.tar.gz https://github.com/pharmatics/qr-secret/releases/download/v1.0.1/qr-secret-linux-amd64.tar.gz
 sudo tar -zxvf qr-secret.tar.gz -C /
 ```
