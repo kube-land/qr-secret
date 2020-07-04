@@ -8,7 +8,7 @@ go:
 - '1.14'
 
 before_install:
-  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo ./hack/install-dependencies-linux.sh ; fi
+- if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo ./hack/install-dependencies-linux.sh ; fi
 
 before_deploy:
 - if [ "$TRAVIS_OS_NAME" = "osx" ]; then ./hack/build-mac.sh ; fi
