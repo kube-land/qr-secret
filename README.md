@@ -5,14 +5,13 @@ Share secrets between Linux/macOS/Windows and mobile
 
 ## Introduction
 
-The `qr-secret` tool converts passwords and secrets into QR code that is printed on screen to scanned by mobile/tablet for sharing them (like complex password, SSH key, WiFi secret, etc). The generated QR code will automatically be closed after 10 seconds if you forgot to close it.
+The `qr-secret` tool converts passwords and secrets into QR code that is printed on screen to be scanned by mobile/tablet (like complex password, SSH key, WiFi secret, etc). The generated QR code will automatically be closed after 10 seconds if you forgot to close it.
 
-A good use case if you don't like hosted password managers services is using `qr-secret` with [KeePassXC](https://keepassxc.org/) which doesn't support plugins (like QR plugin) to share complex passwords with mobile/tablet. Further, [Kaspersky QR Scanner](https://www.kaspersky.de/qr-scanner) could be used to scan the password/secrets on `Android` or `iOS` devices to share the password. 
+A good use case (if you don't like hosted password managers services) is using `qr-secret` with [KeePassXC](https://keepassxc.org/) which doesn't support plugins (like QR plugin) to share complex passwords with mobile/tablet. Further, [Kaspersky QR Scanner](https://www.kaspersky.de/qr-scanner) could be used to scan the password/secrets on `Android` or `iOS` devices to decode the password. 
 
 The tool itself is very minimalistic for simple sharing of secrets, and works on linux and iOS. 
 
 ## Installation
-
 
 ### Linux
 To install on linux download either the binary or the binary with desktop launcher from [here](https://github.com/pharmatics/qr-secret/releases):
