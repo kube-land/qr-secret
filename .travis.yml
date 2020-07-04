@@ -1,0 +1,20 @@
+language: objective-c
+go:
+- '1.13'
+before_install:
+- ./hack/build-mac.sh
+- ls
+- hdiutil create build/QRSecret.dmg -srcfolder build/QRSecret -ov
+- ls build/
+install: true
+#deploy:
+  #provider: releases
+  #skip_cleanup: true
+  #api_key:
+  #  secure: 
+  #file: 
+  #  - "dist/QRSecret.dmg"
+  #on:
+  #  tags: true
+  #  all_branches: true
+  #  repo: pharmatics/qr-secret
