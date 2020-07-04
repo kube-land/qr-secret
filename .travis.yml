@@ -1,11 +1,25 @@
 os: 
   - osx
   - linux
+
 language: go
+
 go:
 - '1.14'
+
 before_install:
-  - sudo apt-get -y install libxcursor-dev libx11-dev libxrandr-dev libxinerama-dev libxi-dev mesa-common-dev libglu1-mesa-dev libgl1-mesa-dev
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]
+    then
+      sudo apt-get -y install \
+            libxcursor-dev \
+            libx11-dev \
+            libxrandr-dev \
+            libxinerama-dev \
+            libxi-dev \
+            mesa-common-dev \
+            libglu1-mesa-dev \
+            libgl1-mesa-dev
+    fi
 
 before_deploy:
 - if [ "$TRAVIS_OS_NAME" = "osx" ]; then ./hack/build-mac.sh ; fi
