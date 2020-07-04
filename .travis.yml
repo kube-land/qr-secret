@@ -23,6 +23,6 @@ deploy:
   file: 
     - "dist/QRSecret.dmg"
   on:
-    tags: true
+  #  tags: true
     all_branches: true
     repo: pharmatics/qr-secret
