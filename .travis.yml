@@ -5,13 +5,13 @@ os:
 language: go
 
 go:
-- '1.14'
+  - '1.14'
 
 before_install:
-- if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get -y install libxcursor-dev libx11-dev libxrandr-dev libxinerama-dev libxi-dev mesa-common-dev libglu1-mesa-dev libgl1-mesa-dev ; fi
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get -y install libxcursor-dev libx11-dev libxrandr-dev libxinerama-dev libxi-dev mesa-common-dev libglu1-mesa-dev libgl1-mesa-dev ; fi
 
 before_deploy:
-- if [ "$TRAVIS_OS_NAME" = "osx" ]; then ./hack/build-mac.sh ; fi
+  - if [ "$TRAVIS_OS_NAME" = "osx" ]; then ./hack/build-mac.sh ; fi
 
 install: true
 
@@ -24,6 +24,5 @@ deploy:
     - build/qr-secret-linux-amd64
   on:
     repo: pharmatics/qr-secret
-    #tags: true
-    #all_branches: true
+    tags: true
   skip_cleanup: 'true'
