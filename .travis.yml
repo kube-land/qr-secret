@@ -6,11 +6,11 @@ go:
 - '1.14'
 before_install:
   - sudo apt-get -y install libxcursor-dev libx11-dev libxrandr-dev libxinerama-dev libxi-dev mesa-common-dev libglu1-mesa-dev libgl1-mesa-dev
+
 before_deploy:
-- "./hack/build-mac.sh"
-- ls
-- hdiutil create build/QRSecret.dmg -srcfolder build/QRSecret -ov
-- ls build/
+- if [ "$TRAVIS_OS_NAME" = "osx" ]; then ./hack/build-mac.sh ; fi
+- if [ "$TRAVIS_OS_NAME" = "osx" ]; then hdiutil create build/QRSecret.dmg -srcfolder build/QRSecret -ov ; fi
+
 install: true
 
 deploy:
