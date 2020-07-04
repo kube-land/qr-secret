@@ -1,6 +1,6 @@
 #! /bin/bash
 
-apt-get -y install \
+sudo apt-get -y install \
         libxcursor-dev \
         libx11-dev \
         libxrandr-dev \
